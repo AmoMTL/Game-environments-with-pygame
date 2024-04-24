@@ -80,6 +80,43 @@ class SnakeEnv:
         new_state = (self.snake.head.x, self.snake.head.y, self.snake.x_dir, self.snake.y_dir, self.apple.x, self.apple.y)
         return new_state, step_reward, self.done
 
+    def Grid(self, screen):
+        for x in range(0, self.width, self.grid_size):
+            for y in range(0, self.height, self.grid_size):
+                rect = pygame.Rect(x, y, self.grid_size, self.grid_size)
+                pygame.draw.rect(screen, "#3c3c3b", rect, 1)
+
+    def render(self, model):
+        render_flag = False
+        state = self.reset()
+
+        pygame.init()
+        font = pygame.font.SysFont("calibri", self.grid_size*2)
+        score_font = pygame.font.SysFont("calibri", 40)
+
+        screen = pygame.display.set_mode((self.width, self.height))
+
+        pygame.display.set_caption("Snake")
+
+        self.Grid(screen)
+
+        ep_reward = 0
+        for step in range(0, self.max_steps):
+            action = model.predict(state)
+            new_state, reward, render_flag = self.step(action)
+            state = new_state
+            ep_reward += reward
+            if render_flag:
+                pygame.quit()
+                break
+            screen.fill("black")
+            self.Grid(screen)
+            pygame.draw.rect(screen, "green", self.snake.head)
+            if len(self.snake.body) > 0:
+                for body in self.snake.body:
+                    pygame.draw.rect(screen, "green", body)
+        
+        pygame.quit()
 
     # Resets the environment and returns the initial state
     def reset(self):
