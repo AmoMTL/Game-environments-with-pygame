@@ -17,17 +17,18 @@ By default, the game window is set to $800\times800$ px with grid spacing of $50
 
 The state of the game at any given time is given by,
 
-![Observation State](https://latex.codecogs.com/svg.latex?Observation\%20state\%20=\%20(snake_{x\_position},\%20snake_{y\_position},\%20snake_{x\_direction},\%20snake_{y\_direction},\%20apple_{x\_position},\%20apple_{y\_position}))
+![Equation](https://latex.codecogs.com/svg.latex?\color{white}Observation\%20state\%20=\%20(snake_{x\_position},\%20snake_{y\_position},\%20snake_{x\_direction},\%20snake_{y\_direction},\%20apple_{x\_position},\%20apple_{y\_position}))
+
 
 \
 where,
-* $snake_{x_position}$ is the x coordinate of the snake head
-* $snake_{y_position}$ is the y coordinate of the snake head
-* $snake_{x_direction}$ is the direction in which,
+* $snake_{x_{position}}$ is the x coordinate of the snake head
+* $snake_{y_{position}}$ is the y coordinate of the snake head
+* $snake_{x_{direction}}$ is the direction in which,
     * +1 signifies the snake head is moving down
     * -1 signifies the snake head is moving up
     * 0 signifies the snake head is moving neither up or down
-* $snake_{y_direction}$ is the direction in which,
+* $snake_{y_{direction}}$ is the direction in which,
     * +1 signifies the snake head is moving right
     * -1 signifies the snake head is moving left
     * 0 signifies the snake head is moving neither left or right
