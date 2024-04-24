@@ -17,7 +17,8 @@ By default, the game window is set to $800\times800$ px with grid spacing of $50
 
 The state of the game at any given time is given by,
 
-$$ Observation state = (snake_{x_position}, snake_{y_position}, snake_{x_direction}, snake_{y_direction}, apple_{x_position}, apple_{y_position})$$
+$$ 
+\text{Observation state} = (snake_{x_position}, snake_{y_position}, snake_{x_direction}, snake_{y_direction}, apple_{x_position}, apple_{y_position})$$
 \
 where,
 * $snake_{x_position}$ is the x coordinate of the snake head
