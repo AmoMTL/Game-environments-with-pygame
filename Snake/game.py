@@ -1,6 +1,7 @@
 import pygame
 import sys
 import random
+import imageio
 
 pygame.init()
 
@@ -166,7 +167,10 @@ while True:
         draw_text('Restart', 36, "black", screen, button_x + button_width / 2, button_y + button_height / 2, max_width=button_width - 10)
 
 
+    
+
     if not game_failed:
         display_score()
         pygame.display.update()
+
     time.tick(10)
