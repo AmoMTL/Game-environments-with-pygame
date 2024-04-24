@@ -1,6 +1,6 @@
 # Snake with PyGame
 
-![Gameplay GIF](Snake/assets/your_game.gif)
+![Gameplay GIF](assets/your_game.gif)
 
 ## Goal
 
