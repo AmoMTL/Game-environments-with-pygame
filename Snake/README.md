@@ -17,8 +17,8 @@ By default, the game window is set to $800\times800$ px with grid spacing of $50
 
 The state of the game at any given time is given by,
 
-$$ 
-\text{Observation state} = (snake_{x_position}, snake_{y_position}, snake_{x_direction}, snake_{y_direction}, apple_{x_position}, apple_{y_position})$$
+![Observation State](https://latex.codecogs.com/svg.latex?Observation\%20state\%20=\%20(snake_{x\_position},\%20snake_{y\_position},\%20snake_{x\_direction},\%20snake_{y\_direction},\%20apple_{x\_position},\%20apple_{y\_position}))
+
 \
 where,
 * $snake_{x_position}$ is the x coordinate of the snake head
