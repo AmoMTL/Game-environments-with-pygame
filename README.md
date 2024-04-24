@@ -6,4 +6,4 @@
 
 ## Games:
 
-### 1. [Snake](Snake\README.md)
+### 1. [Snake](Snake/README.md)
