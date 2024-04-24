@@ -1,7 +1,6 @@
 import pygame
 import sys
 import random
-import imageio
 
 pygame.init()
 
@@ -65,6 +64,7 @@ class Snake:
                 self.body[i].x, self.body[i].y = self.body[i+1].x, self.body[i+1].y
         self.head.x += self.x_dir * grid_size
         self.head.y += self.y_dir * grid_size
+        # allow continuity off the grid
         if self.head.x >= width-1:
             self.head.x = 0
         if self.head.x < 0:
